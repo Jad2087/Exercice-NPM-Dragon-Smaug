@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dragon Smaug</title>
+
+  <link rel="stylesheet" href="./dragon-smaug/node_modules/@jfcmontmorency/dragon-smaug/dist/dragon-smaug.css" />
+</head>
+<body>
+
+  <h1>Dragon Smaug</h1>
+  <p>Flèches ou WASD pour bouger</p>
+  <div id="game"></div>
+
+  <script src="./dragon-smaug/node_modules/@jfcmontmorency/dragon-smaug/dist/dragon-smaug.umd.js"></script>
+
+  <script>
+    const game = DragonSmaug.mount('#game', {
+    cols: 16,
+    rows: 8,
+    speedMs: 140,
+    onGameOver(score) { console.log("Score final:", score); }
+});
+game.start();
+  </script>
+
+</body>
+</html>
